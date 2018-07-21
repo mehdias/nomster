@@ -12,4 +12,5 @@
  <% end %>
 
 
-<div><%= paginate @places, outer_window: 3 %></div>
+<div class="container pagination justify-content-center">
+  <%= paginate @places, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %></div>
