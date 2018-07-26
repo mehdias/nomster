@@ -5,12 +5,11 @@
     <h1><%= place.name %> </h1>
     <i> <%= place.address %> </i><br/><br/>
     <p> <%= place.description %> </p><br/>
-
- </div>
-
- 
- <% end %>
-
+    <% if place.user.present? %>
+      <small><%= place.user.email %> </small>
+    <% end %>
+  </div>
+<% end %>
 
 <div class="container pagination justify-content-center">
   <%= paginate @places, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %></div>
