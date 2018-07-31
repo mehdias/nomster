@@ -19,8 +19,19 @@
     </blockquote>
   </div>
   <% end %>
-  </div>
+</div>
+
+  <% if place.photos.present? %>
+    <div class="col-10 offset-1">
+      <%= image_tag place.photos.first.picture %>
+    </div>
+  <% end %>
+
 <% end %>
+
+
+
+
 
 <div class="container pagination justify-content-center">
   <%= paginate @places, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %></div>
